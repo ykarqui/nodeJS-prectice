@@ -45,7 +45,7 @@ printAllFiles = (path='./') => {
 console.info('Get files sorted')
 getFilesSorted = (path = './test/') => {
     try {
-        let files = fs.readdirSync(path).sort();
+        let files = fs.readdirSync(path).sort().reverse();
         return files;
     } catch (error) {
         console.log('We cannot sort the array...')
