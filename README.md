@@ -9,3 +9,8 @@ $ npm start
 
 #### How to run tests ####
 $ npm test
+
+
+# Libraries installed with npm i
+mocha
+chai
