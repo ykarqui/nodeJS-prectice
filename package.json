@@ -1,0 +1,29 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Some practice with NodeJS",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykarqui/nodeJS-prectice.git"
+  },
+  "author": "Yamil_Karqui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ykarqui/nodeJS-prectice/issues"
+  },
+  "homepage": "https://github.com/ykarqui/nodeJS-prectice#readme",
+  "dependencies": {
+    "mocha": "^7.1.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}

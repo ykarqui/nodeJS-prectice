@@ -29,24 +29,25 @@ console.log('sync', rootDir);*/
 3- a partir de un path determinado , ordenar los archivos de acuerdo al nombre de los archivos
 4- imprimir en consola todos los archivos que empiecen con la letra que mandan por parámentro
 */
-console.log('RESULTS')
+
+console.log('RESULTS:\n')
 // 1 
 getAllFiles = (path) => {
     return fs.readdirSync(path);
 };
 
 // 2
-console.info('Get all files in the directory')
+console.info('Getting all files in the directory...')
 printAllFiles = (path='./') => {
     console.log(getAllFiles(path));
 };
 
 // 3 
-console.info('Get files sorted')
-getFilesSorted = (path = './test/') => {
+console.info('Getting files sorted...')
+getFilesSorted = (path = './pathToTest/') => {
     try {
-        let files = fs.readdirSync(path).sort().reverse();
-        return files;
+        let files = fs.readdirSync(path).sort().reverse()
+        return files
     } catch (error) {
         console.log('We cannot sort the array...')
         console.log(error)
@@ -54,10 +55,25 @@ getFilesSorted = (path = './test/') => {
 }
 
 // 4
-console.info('Get files with request letter')
-getFilesWith = (letter = 'a', path = './test/') => {
+console.info('Counting files with request letter...')
+countFilesWith = (letter = 'a', path = './pathToTest/') => {
+    files = getFilesSorted(path)
+    count = 0
+    files.forEach(elem => {
+        if (elem.charAt(0) === letter) {
+            count++
+        }
+    });
+    return count
 }
 
+exports = countFilesWith;
+
+console.info('2 > Get all files in the directory')
 printAllFiles()
+
+console.info('3 > Get files sorted')
 console.log(getFilesSorted())
-// console.log(getFilesWith('a', './test/'))
+
+console.info('4 > Count files with request letter')
+console.log(countFilesWith('d', './pathToTest/'))
