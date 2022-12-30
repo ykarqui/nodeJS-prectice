@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ykarqui/nodeJS-prectice#readme",
   "dependencies": {
-    "mocha": "^7.1.2"
+    "mocha": "^10.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0"
